@@ -163,7 +163,103 @@ export const hr = {
       terms: "Uvjeti korištenja",
     },
   },
-} as const;
+};
 
-export type Dictionary = typeof hr;
+export type Dictionary = {
+  meta: {
+    title: string;
+    description: string;
+  };
+  nav: {
+    services: string;
+    about: string;
+    portfolio: string;
+    rental: string;
+    contact: string;
+    cta: string;
+  };
+  hero: {
+    badge: string;
+    title: string;
+    titleAccent: string;
+    description: string;
+    cta: string;
+    secondary: string;
+    stats: {
+      projects: string;
+      projectsLabel: string;
+      years: string;
+      yearsLabel: string;
+      clients: string;
+      clientsLabel: string;
+    };
+  };
+  services: {
+    badge: string;
+    title: string;
+    titleAccent: string;
+    description: string;
+    items: Array<{
+      icon: string;
+      title: string;
+      description: string;
+    }>;
+    cta: string;
+  };
+  about: {
+    badge: string;
+    title: string;
+    titleAccent: string;
+    description: string;
+    mission: string;
+    values: Array<{
+      title: string;
+      description: string;
+    }>;
+    cta: string;
+  };
+  rental: {
+    badge: string;
+    title: string;
+    titleAccent: string;
+    description: string;
+    features: string[];
+    includes: {
+      title: string;
+      items: string[];
+    };
+    cta: string;
+  };
+  contact: {
+    badge: string;
+    title: string;
+    titleAccent: string;
+    description: string;
+    form: {
+      name: string;
+      email: string;
+      phone: string;
+      message: string;
+      submit: string;
+    };
+    info: {
+      address: { label: string; value: string };
+      phone: { label: string; value: string };
+      email: { label: string; value: string };
+      hours: { label: string; value: string };
+    };
+  };
+  footer: {
+    tagline: string;
+    copyright: string;
+    links: {
+      services: string;
+      about: string;
+      portfolio: string;
+      contact: string;
+      privacy: string;
+      terms: string;
+    };
+  };
+};
 
