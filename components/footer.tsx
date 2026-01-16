@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'motion/react';
 import { Facebook, Instagram, Linkedin, Youtube, ArrowUp } from 'lucide-react';
 import { useLanguage } from '@/lib/language-context';
@@ -50,17 +51,14 @@ export function Footer() {
               transition={{ duration: 0.6 }}
             >
               {/* Logo */}
-              <a href="#" className="inline-flex items-center gap-3 mb-6 group">
-                <div className="relative w-12 h-12">
-                  <div className="absolute inset-0 bg-gradient-brand rounded-xl opacity-90 group-hover:opacity-100 transition-opacity" />
-                  <span className="absolute inset-0 flex items-center justify-center text-dark-950 font-display font-bold text-2xl">
-                    T
-                  </span>
-                </div>
-                <span className="font-display font-bold text-2xl tracking-tight">
-                  <span className="text-white">tit</span>
-                  <span className="text-gradient">com</span>
-                </span>
+              <a href="#" className="inline-block mb-6">
+                <Image
+                  src="/logo.png"
+                  alt="Titcom"
+                  width={180}
+                  height={50}
+                  className="h-10 w-auto object-contain"
+                />
               </a>
 
               <p className="text-gray-400 leading-relaxed mb-6 max-w-md">

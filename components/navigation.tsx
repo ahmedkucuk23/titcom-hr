@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 import { useLanguage } from '@/lib/language-context';
@@ -49,18 +50,15 @@ export function Navigation() {
             )}
           >
             {/* Logo */}
-            <a href="#" className="relative group flex items-center gap-3">
-              <div className="relative w-10 h-10">
-                {/* Logo mark - stylized T with gradient */}
-                <div className="absolute inset-0 bg-gradient-brand rounded-lg opacity-90 group-hover:opacity-100 transition-opacity" />
-                <span className="absolute inset-0 flex items-center justify-center text-dark-950 font-display font-bold text-xl">
-                  T
-                </span>
-              </div>
-              <span className="font-display font-bold text-xl tracking-tight">
-                <span className="text-white">tit</span>
-                <span className="text-gradient">com</span>
-              </span>
+            <a href="#" className="relative group flex items-center">
+              <Image
+                src="/logo.png"
+                alt="Titcom"
+                width={140}
+                height={40}
+                className="h-8 w-auto object-contain"
+                priority
+              />
             </a>
 
             {/* Desktop Navigation */}

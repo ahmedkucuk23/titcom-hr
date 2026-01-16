@@ -13,6 +13,20 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'hr_HR',
     alternateLocale: 'en_US',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1758,
+        height: 323,
+        alt: 'Titcom - Svjetleće Reklame & LED Rješenja',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Titcom | Svjetleće Reklame & LED Rješenja',
+    description: 'Izrađujemo inovativne svjetleće i nesvjetleće reklame, LED natpise, neon flex dekoracije i digitalne prikaze koji ostavljaju dojam.',
+    images: ['/og-image.png'],
   },
 };
 
